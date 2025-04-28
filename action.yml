@@ -14,3 +14,4 @@ runs:
       run: |
         cd "${{ github.workspace }}" || exit 2
         docker build .
+       
