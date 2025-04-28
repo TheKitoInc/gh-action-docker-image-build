@@ -1,0 +1,16 @@
+name: GH-ACTION-DOCKER-IMAGE-BUILD
+
+branding:
+  icon: trash-2
+  color: red
+
+description: Build with docker
+
+runs:
+  using: composite
+  steps:
+    - name: GH-ACTION-DOCKER-IMAGE-BUILD
+      shell: sh
+      run: |
+        cd "${{ github.workspace }}" || exit 2
+        docker build .
